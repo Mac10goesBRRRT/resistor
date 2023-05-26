@@ -1,48 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="styles.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tauri App</title>
-    <script type="module" src="/main.js" defer></script>
-    <style>
-      .logo.vanilla:hover {
-        filter: drop-shadow(0 0 2em #ffe21c);
-      }
-    </style>
-  </head>
 
-  <body>
-    <div class="container">
-      <h1>Welcome to Tauri!</h1>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tauri App</title>
+  <script type="module" src="/main.js" defer></script>
+  <style>
+    .logo.vanilla:hover {
+      filter: drop-shadow(0 0 2em #ffe21c);
+    }
+  </style>
+</head>
 
-      <div class="row">
-        <a href="https://tauri.app" target="_blank">
-          <img src="/assets/tauri.svg" class="logo tauri" alt="Tauri logo" />
-        </a>
-        <a
-          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-          target="_blank"
-        >
-          <img
-            src="/assets/javascript.svg"
-            class="logo vanilla"
-            alt="JavaScript logo"
-          />
-        </a>
-      </div>
+<body>
+  <div class="container">
+    <h1>Welcome to Tauri!</h1>
 
-      <p>Click on the Tauri logo to learn more about the framework</p>
-
-      <form class="row" id="calc-form">
-        <input id="ring-1" placeholder="Enter a value..." />
-        <input id="ring-2" placeholder="Enter a value..." />
-        <input id="ring-3" placeholder="Enter a value..." />
-        <button type="submit">Calculate</button>
-      </form>
-
-      <p id="resistor-value-msg"></p>
+    <div class="row">
+      <a href="https://tauri.app" target="_blank">
+        <img src="/assets/tauri.svg" class="logo tauri" alt="Tauri logo" />
+      </a>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+        <img src="/assets/javascript.svg" class="logo vanilla" alt="JavaScript logo" />
+      </a>
     </div>
-  </body>
+
+    <p>Click on the Tauri logo to learn more about the framework</p>
+
+    <form class="row" id="calc-form">
+      <!--<input id="ring-1" placeholder="Enter a value..." />-->
+      <select name="Ring 1" id ="ring-1">
+        <option value="Brown">Brown</option>
+        <option value="Red">Red</option>
+        <option value="Orange">Orange</option>
+        <option value="Yellow">Yellow</option>
+        <option value="Green">Green</option>
+        <option value="Blue">Blue</option>
+        <option value="Violet">Violet</option>
+        <option value="Grey">Grey</option>
+        <option value="White">White</option>
+      </select>
+      <select name="Ring 2" id ="ring-2">
+        <option value="Black">Black</option>
+        <option value="Brown">Brown</option>
+        <option value="Red">Red</option>
+        <option value="Orange">Orange</option>
+        <option value="Yellow">Yellow</option>
+        <option value="Green">Green</option>
+        <option value="Blue">Blue</option>
+        <option value="Violet">Violet</option>
+        <option value="Grey">Grey</option>
+        <option value="White">White</option>
+      </select>
+      <select name="Ring 3" id ="ring-3">
+        <option value="Black">Black</option>
+        <option value="Brown">Brown</option>
+        <option value="Red">Red</option>
+        <option value="Orange">Orange</option>
+        <option value="Yellow">Yellow</option>
+        <option value="Green">Green</option>
+        <option value="Blue">Blue</option>
+        <option value="Violet">Violet</option>
+        <option value="Grey">Grey</option>
+        <option value="White">White</option>
+        <option value="Gold">Gold</option>
+        <option value="Silver">Silver</option>
+      </select>
+      <button type="submit">Calculate</button>
+    </form>
+
+    <p id="resistor-value-msg"></p>
+  </div>
+</body>
+
 </html>

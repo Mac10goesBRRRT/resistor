@@ -10,9 +10,21 @@ fn greet(name: &str) -> String {
 
 #[tauri::command]
 fn resistor(input_1: &str, input_2: &str, input_3: &str) -> String{
-    println!("Hello from Rust!");
-    let value = res::resistor_value(input_1, input_2, input_3);
-    format!("The resistor value is {} ohms", value)
+    let mut value = res::resistor_value(input_1, input_2, input_3);
+    let prefix: &str;
+    if value >= 1000000000.0 {
+        value /= 1000000000.0;
+        prefix = "G";
+    } else if value >= 1000000.0 {
+        value /= 1000000.0;
+        prefix = "M";
+    } else if value >= 1000.0 {
+        value /= 1000.0;
+        prefix = "k";
+    } else {
+        prefix = "";
+    }
+    format!("The resistor value is {:.2} {}Ω", value, prefix)
 
 }
 
@@ -23,8 +35,4 @@ fn main() {
         .invoke_handler(tauri::generate_handler![greet, resistor])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
-    /*tauri::Builder::default()
-        .invoke_handler(tauri::generate_handler![resistor])
-        .run(tauri::generate_context!())
-        .expect("error while running tauri application");*/
 }
