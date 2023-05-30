@@ -25,6 +25,9 @@ window.addEventListener("DOMContentLoaded", () => {
   inputR3 = document.querySelector("#ring-3");
   greetMsgEl = document.querySelector("#resistor-value-msg");
   document.querySelector("#calc-form").addEventListener("submit", (e) => {
+    document.getElementById("box-ring-1").style.backgroundColor = document.getElementById("ring-1").value;
+    document.getElementById("box-ring-2").style.backgroundColor = document.getElementById("ring-2").value;
+    document.getElementById("box-ring-3").style.backgroundColor = document.getElementById("ring-3").value;
     e.preventDefault();
     resistor();
   });

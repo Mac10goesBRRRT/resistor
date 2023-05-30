@@ -15,6 +15,7 @@
 }
 
 .container {
+  
   margin: 0;
   padding-top: 10vh;
   display: flex;
@@ -26,12 +27,6 @@
 .logo {
   height: 6em;
   padding: 1.5em;
-  will-change: filter;
-  transition: 0.75s;
-}
-
-.logo.tauri:hover {
-  filter: drop-shadow(0 0 2em #24c8db);
 }
 
 .row {
@@ -106,4 +101,53 @@ button {
   button:active {
     background-color: #0f0f0f69;
   }
+}
+
+#cont {
+  position: relative;
+  width: 300px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+#res,
+#box-ring-1,
+#box-ring-2,
+#box-ring-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#box-ring-1,
+#box-ring-2,
+#box-ring-3 {
+  top: 48px;
+}
+
+#box-ring-1 {
+  left: 80px;
+  width: 10px;
+  height: 48px;
+  margin: 0;
+  background-color: Brown;
+  z-index: 1;
+}
+#box-ring-2 {
+  left:110px;
+  width: 10px;
+  height: 48px;
+  margin: 0;
+  background-color: Black;
+  z-index: 2;
+}
+#box-ring-3 {
+  left:140px;
+  width: 10px;
+  height: 48px;
+  margin: 0;
+  background-color: Black;
+  z-index: 3;
 }
